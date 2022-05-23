@@ -13,32 +13,7 @@
 <meta charset="utf-8">
     <title>transparent login form</title>
     <link rel="stylesheet" href="style/register.css">
-    
-    
-    <script>
-        function validateForm(){
-            var fname = document.getElementById('fname').value;
-            var phone = document.getElementById('email').value;
-            var address = document.getElementById('address').value;
-            var email = document.getElementById('email').value;
-            var address = document.getElementById('address').value;
-            var citizen = document.getElementById('citizen').value;
-            var password = document.getElementById('password').value;
-            if(fname == null)
-            {
-                alert("Please Enter Full Name")
-                return false; 
-            }
-            return true;
-            if(address == null){
-                alert("please fill the address");
-                return false;
-            }
-            return true;
-            
-           
-        }
-    </script>
+   
     </head>
         <body>
             <form action="process_register.php" method="post" onsubmit="return validateForm()">
@@ -47,31 +22,31 @@
                     <h1>Register</h1>
                     <div class="textbox">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <input type="text" placeholder="Fullname" name="fullname" id="fname">
+                        <input type="text" placeholder="Fullname" name="fullname" id="fname" autocomplete="off" required>
+                    </div>
+                    <div class="textbox">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input type="text" placeholder="Phone" name="phone" id="phone" autocomplete="off" required>
                     </div>
                     <div class="textbox">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <input type="text" placeholder="Phone" name="phone" id="phone">
-                    </div>
-                    <div class="textbox">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <input type="text" placeholder="Home Address" name="address" id="address">
+                        <input type="text" placeholder="Home Address" name="address" id="address" autocomplete="off" required>
                     </div>
                     <div class="textbox">
                          <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                        <input type="text" placeholder="Citizenship Number" name="cit_id" id="citizen">
+                        <input type="text" placeholder="Citizenship Number" name="cit_id" id="citizen" autocomplete="off" required>
                     </div>
                     <div class="textbox">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <input type="email" placeholder="Email" name="email" id="email">
+                        <input type="email" placeholder="Email" name="email" id="email" autocomplete="off" required>
                     </div>
                     <div class="textbox">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <input type="text" placeholder="Username" name="username" id="username">
+                        <input type="text" placeholder="Username" name="username" id="username" autocomplete="off" required>
                     </div>
                     <div class="textbox">
                         <i class="fa fa-key" aria-hidden="true"></i>
-                        <input type="password" placeholder="Password" name="password" id="password">
+                        <input type="password" placeholder="Password" name="password" id="password" autocomplete="off" required>
                     </div>
                     <input class="btn" type="submit" name="" value="Sign up">
                       </div>

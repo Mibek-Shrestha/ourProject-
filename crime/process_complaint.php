@@ -13,4 +13,4 @@
 
     mysqli_query($conn, $query);
 
-    echo "success";
+    header("location:detail.php");

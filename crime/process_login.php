@@ -6,7 +6,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
             
-        $query = "select * from users where username = '$username' and password = '$password'";
+        $query = "select * from users where (username = '$username' or email = '$username') and password = '$password'";
 
         $res = mysqli_query($conn,$query);
 
@@ -15,16 +15,16 @@
         if($row["usertype"] == "user")
             {
                 $_SESSION["username"] = $username;
-                header("location:welcome.php");
+                header("location:complaint.php");
             }
             elseif($row["usertype"]=="admin")
             {
-                $_SESSION["username"] = $username;
+                $_SESSION["admin"] = $username;
                 header("location:adminpage.php");
             }
             else
             {
-                echo"username or password incorrect";
+                header("location:login.php?Error=invalid username or password");
             }
 
 

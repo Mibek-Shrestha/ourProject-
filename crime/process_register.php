@@ -12,4 +12,4 @@
     $query = "insert into users(fullName,address,phone,cit_id,email,username,password) values('$fname','$address','$phone','$cit_id','$email','$username','$password')";
     mysqli_query($conn, $query);
 
-    echo "success";
+    header("location:login.php");

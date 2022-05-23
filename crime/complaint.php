@@ -1,6 +1,9 @@
 <?php
-    include_once "header.php";
-    
+    include_once "head.php";
+        session_start();
+        if(!isset($_SESSION["username"])){
+            header("location:login.php");
+        }
     ?>
 
 
@@ -12,30 +15,7 @@
     <link rel="stylesheet" href="style/register.css">
     
     
-    <script>
-        function validateForm(){
-            var fname = document.getElementById('fname').value;
-            var phone = document.getElementById('email').value;
-            var address = document.getElementById('address').value;
-            var email = document.getElementById('email').value;
-            var address = document.getElementById('address').value;
-            var citizen = document.getElementById('citizen').value;
-            var password = document.getElementById('password').value;
-            if(fname == null)
-            {
-                alert("Please Enter Full Name")
-                return false; 
-            }
-            return true;
-            if(address == null){
-                alert("please fill the address");
-                return false;
-            }
-            return true;
-            
-           
-        }
-    </script>
+    
     </head>
         <body>
             <form action="process_complaint.php" method="post" onsubmit="return validateForm()">
@@ -47,7 +27,7 @@
                         <input type="text" placeholder="Fullname" name="fullname" id="fname">
                     </div>
                     <div class="textbox">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
                         <input type="text" placeholder="Phone" name="phone" id="phone">
                     </div>
                     <div class="textbox">
@@ -66,7 +46,7 @@
                         <input type="text" placeholder="ReasonforComplaint" name="complaint" id="">
                     </div>
                     <div class="textbox">
-                        <textarea placeholder="Please provide any details " name="description" id="" cols="30" rows="10"></textarea>
+                        <textarea placeholder="Please provide any details " name="description" id="" cols="45" rows="6"></textarea>
                     </div>
                   
                     

@@ -15,12 +15,12 @@
                     <h1>Login</h1>
                     <div class="textbox">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <input type="text" placeholder="Username/Email" name="username" value="">
+                        <input type="text" placeholder="Username/Email" name="username" value="" autocomplete="off" required>
                     </div>
                     <div class="textbox">
                         <i class="fa fa-key" aria-hidden="true"></i>
 
-                        <input type="password" placeholder="Password" name="password" value="">
+                        <input type="password" placeholder="Password" name="password" value="" autocomplete="off" required>
                     </div>
                     <input class="btn" type="submit" name="" value="Sign in">
                       </div>
@@ -28,9 +28,9 @@
 
             
         <?php
-     
-            if(isset($_POST['error'])){
-                echo $_POST['error'];
+          
+            if(isset($_POST['Error'])){
+                echo $_POST['Error'];
             }
          ?>
         </body>

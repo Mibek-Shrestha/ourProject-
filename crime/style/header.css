@@ -14,6 +14,7 @@
     font-family: "Poppins", sans-serif;
     position: sticky;
     top: 0;
+   
     
   }
   /* .logo {
@@ -26,7 +27,6 @@
 
   .nav-links {
     display: flex;
-  
     justify-content: space-around;
     width: 50%;
   }
