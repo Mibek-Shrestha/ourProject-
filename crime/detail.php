@@ -25,9 +25,10 @@ include 'head.php';
       <th scope="col">Fullname</th>
       <th scope="col">Address</th>
       <th scope="col">Phone</th>
-      <th scope="col">Citzen_id</th>
+      <!-- <th scope="col">Citzen_id</th> -->
       <th scope="col">Email</th>
       <th scope="col">Complaint Topic</th>
+      <th scope="col">File</th>
       <th scope="col">Detail</th>
     </tr>
   </thead>
@@ -40,19 +41,20 @@ include 'head.php';
         $id=$row['id'];
         $fullname=$row['fullname'];
         $address=$row['address'];
-        $cit_id=$row['cit_id'];
+        // $cit_id=$row['cit_id'];
         $email=$row['email'];
         $phone=$row['phone'];
         $complaint = $row['complaint'];
+        $file = $row['file'];
         $details=$row['description'];
         echo'<tr>
           <th scope="row">'.$id.'</th>
           <td>'.$fullname.'</td>
           <td>'.$address.'</td>
           <td>'.$phone.'</td>
-          <td>'.$cit_id.'</td>
           <td>'.$email.'</td>
           <td>'.$complaint.'</td>
+          <td>.<img src="images/'.$file.'"style="height:150px;width:150px"/>.</td>
           <td>'.$details.'</td>
           <td>
         <button class="btn btn-danger"><a href="update.php?updateid='.$id.'"

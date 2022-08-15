@@ -1,30 +1,26 @@
 <?php
     session_start();
-    require_once "db_config.php";
+    require_once "include/db_config.php";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = $_POST['username'];
         $password = $_POST['password'];
             
-        $query = "select * from users where (username = '$username' or email = '$username') and password = '$password'";
+        $query = "select * from user where (username = '$username') and password = '$password'";
 
         $res = mysqli_query($conn,$query);
 
 
         $row = mysqli_fetch_array($res);
-        if($row["usertype"] == "user")
-            {
-                $_SESSION["username"] = $username;
-                header("location:complaint.php");
-            }
-            elseif($row["usertype"]=="admin")
+            if($row["username"]=="admin")
             {
                 $_SESSION["admin"] = $username;
-                header("location:adminpage.php");
+                header("location:admin/dash.php");
             }
             else
             {
                 header("location:login.php?Error=invalid username or password");
+                // $error[] = 'incorrect credentials';
             }
 
 

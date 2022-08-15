@@ -1,9 +1,9 @@
 <?php
  session_start();
- if(!isset($_SESSION["admin"])){
-     header("location:login.php");
- }
-include "db_config.php";
+//  if(!isset($_SESSION["admin"])){
+//      header("location:login.php");
+//  }
+include "incude/db_config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

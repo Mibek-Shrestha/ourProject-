@@ -14,19 +14,21 @@
     color: #7288a2;
     font-size: 1.15rem;
     font-weight: 400;
+    text-decoration: none;
     border-bottom: 1px solid #e5e5e5;
   }
   .accordion a:hover,
   .accordion a:hover::after {
     cursor: pointer;
-    color: #ff5353;
+    color: #3B3E73;
   }
   .accordion a:hover::after {
-    border: 1px solid #ff5353;
+    border: 1px solid #3B3E73;
+    
   }
   .accordion a.active {
-    color: #ff5353;
-    border-bottom: 1px solid #ff5353;
+    color: #3B3E73;
+    border-bottom: 1px solid #3B3E73;
   }
   .accordion a::after {
     font-family: 'Ionicons';
@@ -48,8 +50,8 @@
   .accordion a.active::after {
     font-family: 'Ionicons';
     content: '\f209';
-    color: #ff5353;
-    border: 1px solid #ff5353;
+    color: #3B3E73;
+    border: 1px solid #3B3E73;
   }
   .accordion .content {
     opacity: 0;

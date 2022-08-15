@@ -1,53 +1,52 @@
-
+.content{
+  background-color: #F0EDFF;
+}
 .hero {
-    background: gray;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(../images/cover.jpeg);
+    background-image: url(../images/crime1.jpg);
     background-repeat: none;
     background-size: cover;
     min-height: 100vh;
   }
   .hero h1,
   .hero h2 {
-    color: rgb(241, 44, 44);
+    color: #ff8e00;
     font-size: 20px;
     text-shadow: 2px 2px #000;
     margin-bottom: 40px;
   }
   .hero h1 {
     font-size: 60px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
-  .hero a.btn {
-    columns: white;
-    background-color: #c1612a;
-    text-decoration: none;
-    padding: 20px 46px;
-    border-radius: 8px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    opacity: 1;
-    border: 1px solid wheat;
+  button {
+    color: #fff;
+    font-size: 20px;
+    background-color: #041442;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 30px;
+    margin: 1rem;
   }
-  .hero a.btn:hover {
-    background-color: #2196f3;
+ button:hover {
+    background-color: #3B3E73;
   }
   a {
     color: white;
   }
   footer {
-    background-color: #131622;
+    width: 100%;
     color: wheat;
     text-align: center;
-  
-    background: linear-gradient(to bottom, #812013, #000 100%);
-    padding: 30px 0;
+    float:left;
+    background: black;
+    /* padding: 30px 0; */
     display: flex;
     flex-direction: column;
     align-items: center;

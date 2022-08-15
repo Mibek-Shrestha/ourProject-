@@ -17,7 +17,7 @@ $row=mysqli_fetch_assoc($result);
 $fullname = $row['fullname'];
 $address = $row['address'];
 $phone = $row['phone'];
-$cit_id = $row['cit_id'];
+// $cit_id = $row['cit_id'];
 $email = $row['email'];
 $complaint = $row['complaint'];
 $description = $row['description'];
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
     $fullname = $_POST['fullname'];
     $address = $_POST['address'];
     $phone = $_POST['phone'];
-    $cit_id = $_POST['cit_id'];
+    // $cit_id = $_POST['cit_id'];
     $email = $_POST['email'];
     $complaint = $_POST['complaint'];
     $description = $_POST['description'];
@@ -73,10 +73,10 @@ if(isset($_POST['submit'])){
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <input type="text" placeholder="Home Address" name="address" id="address" value= <?php  echo  $address; ?> >
                     </div>
-                    <div class="textbox">
+                    <!-- <div class="textbox">
                          <i class="fa fa-id-card-o" aria-hidden="true"></i>
                         <input type="text" placeholder="Citizenship Number" name="cit_id" id="citizen" value= <?php  echo  $cit_id; ?>>
-                    </div>
+                    </div> -->
                     <div class="textbox">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         <input type="email" placeholder="Email" name="email" id="email" value= <?php  echo  $email; ?>>
